@@ -9,5 +9,7 @@ export interface FieldConfig {
   type: string,
   validation?: ValidatorFn[],
   value?: any,
-  size?: number
+  size?: number,
+  maxlength?: number,
+  html_type?: string
 }

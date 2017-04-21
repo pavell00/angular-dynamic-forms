@@ -12,10 +12,20 @@ import { FieldConfig } from '../../models/field-config.interface';
       class="dynamic-field form-input" 
       [formGroup]="group">
       <label>{{ config.label }}</label>
-      <input
-        type="text"
-        [attr.placeholder]="config.placeholder"
-        [formControlName]="config.name">
+      <div *ngIf="html_type=='text'">
+        <input
+          type="text"
+          [attr.placeholder]="config.placeholder"
+          [formControlName]="config.name">
+      </div>
+      <div *ngIf="html_type=='password'">
+        <input
+          type="password"
+          [attr.value]="config.value"
+          [attr.size]="config.size"
+          [attr.maxlength]="config.maxlength"
+          [formControlName]="config.name">
+      </div>      
     </div>
   `
 })

@@ -28,7 +28,8 @@ export class AppComponent implements AfterViewInit {
       label: 'Full name',
       name: 'name',
       placeholder: 'Enter your name',
-      validation: [Validators.required, Validators.minLength(4)]
+      validation: [Validators.required, Validators.minLength(4)],
+      html_type: 'text'
     },
     {
       type: 'select',
@@ -42,7 +43,15 @@ export class AppComponent implements AfterViewInit {
       label: 'Submit',
       name: 'submit',
       type: 'button'
-    }
+    },
+    {
+      type: 'password',
+      name: 'pass',
+      value: 'Enter your pass',
+      size: 25,
+      maxlength: 15,
+      html_type: 'password'
+    }    
   ];
 
   ngAfterViewInit() {
