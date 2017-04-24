@@ -50,7 +50,8 @@ export class AppComponent implements AfterViewInit {
       value: 'Enter your pass',
       size: 25,
       maxlength: 15,
-      html_type: 'password'
+      html_type: 'password',
+      validation: [Validators.required, Validators.minLength(3)],
     }    
   ];
 

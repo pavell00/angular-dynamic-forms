@@ -12,13 +12,13 @@ import { FieldConfig } from '../../models/field-config.interface';
       class="dynamic-field form-input" 
       [formGroup]="group">
       <label>{{ config.label }}</label>
-      <div *ngIf="html_type=='text'">
+      <div *ngIf="config.html_type == 'text'">
         <input
           type="text"
           [attr.placeholder]="config.placeholder"
           [formControlName]="config.name">
       </div>
-      <div *ngIf="html_type=='password'">
+      <div *ngIf="config.html_type == 'password'">
         <input
           type="password"
           [attr.value]="config.value"
